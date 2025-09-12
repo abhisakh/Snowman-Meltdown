@@ -20,6 +20,7 @@ def display_game_state(mistakes, secret_word, guessed_letters):
             display_word += "_ "
     print("Word: ", display_word.strip())
     print("Guessed letters:", " ".join(guessed_letters))
+    print("*"*100)
     print("\n")
 
 
@@ -34,12 +35,10 @@ def play_game():
     while True:
         display_game_state(mistakes, secret_word, guessed_letters)
 
-        # Check win condition
         if all(letter in guessed_letters for letter in secret_word):
             print("Congratulations! You saved the snowman and guessed the word:", secret_word)
             break
 
-        # Check loss condition
         if mistakes >= max_mistakes:
             print("Game Over! The snowman melted!")
             print("The word was:", secret_word)
@@ -47,13 +46,26 @@ def play_game():
 
         guess = input("Guess a letter: ").lower()
 
-        # Ignore repeated guesses
+
         if guess in guessed_letters:
-            print("You already guessed that letter! Try another.\n")
-            continue
+            if guess in secret_word:
+                print("*"*100)
+                print("You already guessed that letter correctly. Try another.\n")
+                continue
+            else:
+                # Repeated wrong guess – penalize again
+                mistakes += 1
+                print("*"*100)
+                print(f"Wrong again! You already guessed '{guess}' and it's still wrong.")
+                print(f"You have {max_mistakes - mistakes} chances left.\n")
+                continue
 
         guessed_letters.append(guess)
 
-        if guess not in secret_word:
+        if guess in secret_word:
+            print("*"*100)
+            print("Good guess!\n")
+        else:
             mistakes += 1
+            print("*"*100)
             print(f"Wrong guess! You have {max_mistakes - mistakes} chances left.\n")
