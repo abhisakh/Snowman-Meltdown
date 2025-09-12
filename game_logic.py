@@ -46,6 +46,10 @@ def play_game():
 
         guess = input("Guess a letter: ").lower()
 
+        # Input validation
+        if not guess.isalpha() or len(guess) != 1:
+            print("Please enter a single valid letter.\n")
+            continue
 
         if guess in guessed_letters:
             if guess in secret_word:
@@ -69,3 +73,5 @@ def play_game():
             mistakes += 1
             print("*"*100)
             print(f"Wrong guess! You have {max_mistakes - mistakes} chances left.\n")
+
+
