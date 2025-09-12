@@ -25,6 +25,13 @@ def display_game_state(mistakes, secret_word, guessed_letters):
 
 
 def play_game():
+    """
+    Handles the main gameplay loop:
+    - Gets a random secret word
+    - Tracks user guesses and mistakes
+    - Displays the game state after each guess
+    - Ends the game when the player wins or loses
+    """
     secret_word = get_random_word()
     guessed_letters = []
     mistakes = 0

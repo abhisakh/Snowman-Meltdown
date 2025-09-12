@@ -3,6 +3,12 @@
 from game_logic import play_game
 
 def main():
+    """
+    Runs the full game loop and handles replay logic:
+    - Calls play_game()
+    - Asks the user if they want to play again after each game
+    - Validates input for replay ('y' or 'n')
+    """
     while True:
         play_game()
 
