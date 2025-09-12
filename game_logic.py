@@ -1,36 +1,5 @@
-import random
-# Snowman ASCII Art stages
-STAGES = [
-    """
-      ___
-     /___\\
-     (o o)
-     ( : )
-     ( : )
-    """,
-    """
-      ___
-     /___\\
-     (o o)
-     ( : )
-    """,
-    """
-      ___
-     /___\\
-     (o o)
-    """,
-    """
-      ___
-     /___\\
-    """
-]
+from ascii_art import STAGES
 
-# List of secret words
-WORDS = ["python", "git", "github", "snowman", "meltdown"]
-
-def get_random_word():
-    """Selects a random word from the list."""
-    return random.choice(WORDS)
 
 
 def display_game_state(mistakes, secret_word, guessed_letters):
@@ -81,7 +50,3 @@ def play_game():
         if guess not in secret_word:
             mistakes += 1
             print(f"Wrong guess! You have {max_mistakes - mistakes} chances left.\n")
-
-
-if __name__ == "__main__":
-    play_game()
