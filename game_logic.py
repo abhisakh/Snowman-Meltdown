@@ -3,7 +3,7 @@ import shutil
 from ascii_art import STAGES
 
 # ANSI Color Constants
-RED = "\033[35m"
+RED = "\033[91m"
 GREEN = "\033[92m"
 YELLOW = "\033[93m"
 CYAN = "\033[96m"
