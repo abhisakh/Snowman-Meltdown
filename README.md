@@ -24,11 +24,11 @@ Save the snowman by guessing the secret word before it melts completely!
 ============================================================================================================
 
     **********************
-    *   *      ___      * *
+    *   *     ___      * *
     *    *   /___\    *  *
-    *  *     (o o)     *  *
-    *    * --( : )-- *    *
-    *  *     ( : )     *  *
+    *  *     (o o)     * *
+    *    * --( : )-- *   *
+    *  *     ( : )     * *
     **********************
 Word:  _ _ _ _ _ _ The secret letter has 6 character
 Guessed letters: a o
