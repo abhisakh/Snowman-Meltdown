@@ -18,15 +18,19 @@ Save the snowman by guessing the secret word before it melts completely!
 
 ## 🎮 Game Preview
 
-```text
-Welcome to Snowman Meltdown!
+```
+============================================================================================================
+                                        Welcome to Snowman Meltdown!                                        
+============================================================================================================
 
-  ___
- /___\
- (o o)
- ( : )
- ( : )
-Word:  _ _ _ _ _ _ _
+    **********************
+    *   *      ___      * *
+    *    *   /___\    *  *
+    *  *     (o o)     *  *
+    *    * --( : )-- *    *
+    *  *     ( : )     *  *
+    **********************
+Word:  _ _ _ _ _ _ The secret letter has 6 character
 Guessed letters: a o
 
 ****************************************************************************************************
@@ -41,14 +45,14 @@ cd snowman-meltdown
 ```
 ### 2.Run the game:
 ```text
-python main.py
+python snowman.py
 ```
 ## 🗂️ Project Structure
 ```text
 snowman-meltdown/
 ├── ascii_art.py       # Contains ASCII art for snowman stages
 ├── game_logic.py      # Core game logic functions
-├── main.py            # Entry point of the program
+├── snowman.py         # Entry point of the program
 └── README.md          # Project documentation
 ```
 ## 📋 Requirements
